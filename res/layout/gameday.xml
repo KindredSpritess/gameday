@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:id="@+id/frame">
+	<LinearLayout android:id="@+id/root" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="vertical">
+		<!-- Linescore -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:gravity="center_vertical">
+			<!-- Teams -->
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:orientation="vertical">
+				<TextView android:background="@drawable/linebox"
+					android:layout_width="45dip" android:layout_height="wrap_content">
+				</TextView>
+				<TextView android:id="@+id/away_name" android:background="@drawable/linebox"
+					android:textSize="14sp" android:gravity="center_vertical|left"
+					android:paddingLeft="3dip" android:textColor="#ff000000"
+					android:layout_width="45dip" android:layout_height="wrap_content">
+				</TextView>
+				<TextView android:id="@+id/home_name" android:background="@drawable/linebox"
+					android:textSize="14sp" android:gravity="center_vertical|left"
+					android:paddingLeft="3dip" android:textColor="#ff000000"
+					android:layout_width="45dip" android:layout_height="wrap_content">
+				</TextView>
+			</LinearLayout>
+			<!-- Innings -->
+			<HorizontalScrollView android:layout_width="207dip"
+				android:layout_height="wrap_content">
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="vertical">
+					<LinearLayout android:id="@+id/innings_headers"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:orientation="horizontal" android:gravity="center_vertical">
+					</LinearLayout>
+					<LinearLayout android:id="@+id/away_innings"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:orientation="horizontal" android:gravity="center_vertical">
+					</LinearLayout>
+					<LinearLayout android:id="@+id/home_innings"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:orientation="horizontal" android:gravity="center_vertical">
+					</LinearLayout>
+				</LinearLayout>
+			</HorizontalScrollView>
+			<!-- Summaries -->
+			<LinearLayout android:layout_width="69dip"
+				android:layout_height="wrap_content" android:orientation="vertical">
+				<LinearLayout android:id="@+id/summaries"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:orientation="horizontal" android:gravity="center_vertical">
+				</LinearLayout>
+				<LinearLayout android:id="@+id/away_summaries"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:orientation="horizontal" android:gravity="center_vertical">
+				</LinearLayout>
+				<LinearLayout android:id="@+id/home_summaries"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:orientation="horizontal" android:gravity="center_vertical">
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<!-- BSO -->
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:gravity="center_vertical" android:background="@drawable/statusbar_background">
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="1"
+				android:gravity="center_vertical|left" android:paddingLeft="6px">
+				<ImageView android:id="@+id/gamedaybases" android:src="@drawable/gamebases0"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginRight="6dip" />
+				<ImageView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_marginRight="6dip"
+					android:id="@+id/gameday_halfinning" />
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gameday_innings"
+					android:singleLine="true" android:textSize="16sp"
+					android:textStyle="bold" android:textColor="?android:attr/textColorPrimaryInverse" />
+			</LinearLayout>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="0"
+				android:id="@+id/gameday_ballsstrikes" android:singleLine="true"
+				android:textSize="16sp" android:textStyle="bold" android:gravity="center"
+				android:layout_gravity="center" android:textColor="?android:attr/textColorPrimaryInverse" />
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="1"
+				android:orientation="horizontal" android:gravity="right|center_vertical"
+				android:paddingRight="6px" android:layout_gravity="right|center_vertical">
+				<ImageView android:id="@+id/out1" android:src="@drawable/gamebubble"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginRight="2dip" />
+				<ImageView android:id="@+id/out2" android:src="@drawable/gamebubble"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginRight="2dip" />
+				<ImageView android:id="@+id/out3" android:src="@drawable/gamebubble"
+					android:layout_width="wrap_content" android:layout_height="wrap_content" />
+			</LinearLayout>
+		</LinearLayout>
+		<TextView android:id="@+id/gameday_pitcher"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical" android:singleLine="true"
+			android:textSize="16sp" android:textStyle="bold"
+			android:textColor="?android:attr/textColorPrimaryInverse"
+			android:background="@drawable/statusbar_background" />
+		<TextView android:id="@+id/gameday_hitter"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical|right" android:singleLine="true"
+			android:textSize="16sp" android:textStyle="bold"
+			android:textColor="?android:attr/textColorPrimaryInverse"
+			android:background="@drawable/statusbar_background" />
+
+	</LinearLayout>
+</FrameLayout>

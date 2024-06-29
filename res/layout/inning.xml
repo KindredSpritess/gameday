@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SlidingDrawer
+	 xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/drawer"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:handle="@+id/grabber"
+     android:content="@+id/content">
+
+	 <TextView
+	 	android:id="@id/grabber"
+	 	android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:textSize="10sp"
+	    android:textColor="#ff000000"
+	    android:background="@drawable/statusbar_background"
+	    android:textStyle="bold"
+	    android:text="Innings"
+	 />
+	 <LinearLayout
+	 	android:id="@id/content"
+  	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+     > 
+	     <HorizontalScrollView
+	     	android:layout_width="fill_parent"
+	     	android:layout_height="wrap_content"
+	     >
+	     	<LinearLayout
+		    	android:id="@+id/handle"
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:gravity="center"
+		    	android:background="@drawable/statusbar_background">
+		 	</LinearLayout>
+		 </HorizontalScrollView>
+
+     <ScrollView
+     	 android:id="@id/content"
+  	     android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="@drawable/blank_tile">
+		 <LinearLayout
+		     android:layout_width="fill_parent"
+	    	 android:layout_height="fill_parent"
+	     	 android:id="@+id/plays"
+		     android:orientation="vertical"
+	  	 />
+  	 </ScrollView>
+  	 </LinearLayout>
+</SlidingDrawer>
